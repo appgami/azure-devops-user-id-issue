@@ -1,0 +1,7 @@
+{
+  "short_name": "User ID POC",
+  "name": "User ID POC",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,73 @@
+{
+  "manifestVersion": 1,
+  "id": "azure-devops-user-id-issue",
+  "version": "0.0.0",
+  "name": "azure-devops-user-id-issue",
+  "baseUri": "http://localhost:3000",
+  "description": "Proof of concept for an issue with user IDs mismatching the nameid parameter present in the app token. Please, see README.",
+  "publisher": "appgami",
+  "categories": ["Azure Boards"],
+  "tags": [],
+  "scopes": ["vso.work"],
+  "galleryFlags": [],
+  "licensing": {
+    "overrides": [
+      { "id": "retrospectives.index-hub", "behavior": "AlwaysInclude" }
+    ]
+  },
+  "content": {
+    "details": {
+      "path": "azure-marketplace/details.md"
+    },
+    "license": {
+      "path": "azure-marketplace/license.md"
+    },
+    "privacypolicy": {
+      "path": "azure-marketplace/privacyPolicy.md"
+    }
+  },
+  "screenshots": [],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services.Cloud"
+    },
+    {
+      "id": "Microsoft.TeamFoundation.Server",
+      "version": "[17,)"
+    }
+  ],
+  "demands": ["api-version/3.0", "contributionType/ms.vss-web.hub"],
+  "icons": {
+    "default": "images/logo.png"
+  },
+  "files": [
+    {
+      "path": "static",
+      "addressable": true
+    },
+    {
+      "path": "index.html",
+      "addressable": true
+    },
+    {
+      "path": "images",
+      "addressable": true
+    }
+  ],
+  "contributions": [
+    {
+      "id": "user-id-poc.index-hub",
+      "type": "ms.vss-web.hub",
+      "targets": ["ms.vss-work-web.work-hub-group"],
+      "properties": {
+        "name": "User ID POC",
+        "uri": "index.html",
+        "order": 30,
+        "icon": {
+          "light": "asset://images/icon_light_theme.png",
+          "dark": "asset://images/icon_dark_theme.png"
+        }
+      }
+    }
+  ]
+}

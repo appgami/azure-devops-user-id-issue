@@ -1,0 +1,38 @@
+{
+  "name": "azure-devops-user-id-issue",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "azure:package": "tfx extension create --root azure/assets --output-path azure/dist",
+    "azure:publish": "tfx extension publish --root azure/assets --output-path azure/dist -t $(bash azure/scripts/getVssToken.sh)"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "prettier": "^2.3.2",
+    "tfx-cli": "^0.9.2",
+    "react-scripts": "^4.0.3"
+  },
+  "dependencies": {
+    "azure-devops-extension-api": "^1.158.0",
+    "azure-devops-extension-sdk": "^2.0.11",
+    "jsonwebtoken": "^8.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
